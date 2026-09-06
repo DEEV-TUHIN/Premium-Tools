@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="pageTitle">Premium Tools BD</title>
-    <link rel="icon" type="image/png" href="https://i.ibb.co.com/hJMc4Ypz/FB-IMG-1785771003053.jpg">
+    <title id="pageTitle">Ahosan Service</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -12,11 +11,7 @@
         .swiper { width: 100%; aspect-ratio: 21/9; max-height: 380px; border-radius: 1.5rem; }
         .swiper-slide { display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;}
         .swiper-slide img { width: 100%; height: 100%; object-fit: cover; position: absolute; z-index: -1; }
-        .payment-card-radio:checked + label {
-            border-color: #4f46e5;
-            background-color: #f5f3ff;
-            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
-        }
+        .payment-card-radio:checked + label { border-color: #4f46e5; background-color: #f5f3ff; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased flex flex-col min-h-screen relative">
@@ -36,9 +31,7 @@
                 </div>
                 <input type="tel" id="loginPhone" placeholder="হোয়াটসঅ্যাপ নম্বর দিন" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:border-indigo-500 outline-none font-medium">
                 <button onclick="window.handleLogin()" class="w-full bg-indigo-600 text-white font-bold py-3 rounded-xl hover:bg-indigo-700 shadow-md">লগইন করুন</button>
-                <div class="text-center text-xs text-gray-500 mt-4">
-                    একাউন্ট নেই? <button onclick="window.switchAuthView('register')" class="text-indigo-600 font-bold hover:underline">রেজিস্ট্রেশন করুন</button>
-                </div>
+                <div class="text-center text-xs text-gray-500 mt-4">একাউন্ট নেই? <button onclick="window.switchAuthView('register')" class="text-indigo-600 font-bold hover:underline">রেজিস্ট্রেশন করুন</button></div>
             </div>
 
             <div id="registerView" class="space-y-4 hidden">
@@ -50,9 +43,7 @@
                 <input type="email" id="regEmail" placeholder="আপনার ইমেইল" class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm outline-none focus:border-indigo-500">
                 <input type="tel" id="regPhone" placeholder="হোয়াটসঅ্যাপ নম্বর (লগইনের জন্য)" class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm outline-none focus:border-indigo-500">
                 <button onclick="window.handleRegister()" class="w-full bg-emerald-600 text-white font-bold py-3 rounded-xl hover:bg-emerald-700 shadow-md">রেজিস্ট্রেশন সম্পন্ন করুন</button>
-                <div class="text-center text-xs text-gray-500 mt-4">
-                    আগে থেকে একাউন্ট আছে? <button onclick="window.switchAuthView('login')" class="text-indigo-600 font-bold hover:underline">লগইন করুন</button>
-                </div>
+                <div class="text-center text-xs text-gray-500 mt-4">আগে থেকে একাউন্ট আছে? <button onclick="window.switchAuthView('login')" class="text-indigo-600 font-bold hover:underline">লগইন করুন</button></div>
             </div>
 
             <div id="dashboardView" class="hidden flex flex-col h-[70vh] md:h-auto max-h-[600px]">
@@ -77,9 +68,7 @@
             <div class="w-20 h-20 bg-red-100 text-red-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-4"><i class="fa-solid fa-circle-exclamation"></i></div>
             <h3 class="text-xl font-extrabold text-gray-900 mb-2">পেমেন্ট অসম্পূর্ণ!</h3>
             <p class="text-sm text-gray-500 mb-6">আপনার অর্ডারটি কনফার্ম করা সম্ভব হয়নি। কোনো সমস্যা হলে দয়া করে সাপোর্ট টিমের সাথে যোগাযোগ করুন।</p>
-            <a id="failSupportBtn" href="#" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-emerald-500 text-white font-bold py-3.5 rounded-2xl hover:bg-emerald-600 transition shadow-lg">
-                <i class="fa-brands fa-whatsapp text-xl"></i> মেসেজ দিন
-            </a>
+            <a id="failSupportBtn" href="#" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-emerald-500 text-white font-bold py-3.5 rounded-2xl hover:bg-emerald-600 transition shadow-lg"><i class="fa-brands fa-whatsapp text-xl"></i> মেসেজ দিন</a>
             <button onclick="window.closeFailModal()" class="mt-4 text-xs font-bold text-gray-400 hover:text-gray-600">বন্ধ করুন</button>
         </div>
     </div>
@@ -101,12 +90,10 @@
 
             <div class="flex items-center gap-2 md:gap-3 shrink-0">
                 <button onclick="window.toggleTrackModal()" class="text-xs md:text-sm font-semibold text-gray-700 hover:text-indigo-600 bg-gray-100 px-3 py-2 md:px-3.5 md:py-2.5 rounded-full transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-truck-fast text-indigo-600"></i>
-                    <span class="hidden md:inline">অর্ডার ট্র্যাক</span>
+                    <i class="fa-solid fa-truck-fast text-indigo-600"></i><span class="hidden md:inline">অর্ডার ট্র্যাক</span>
                 </button>
                 <button onclick="window.toggleAuthModal()" class="text-xs md:text-sm font-semibold text-gray-700 hover:text-indigo-600 bg-gray-100 px-3 py-2 md:px-3.5 md:py-2.5 rounded-full transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-user text-indigo-600"></i>
-                    <span class="hidden md:inline">একাউন্ট</span>
+                    <i class="fa-solid fa-user text-indigo-600"></i><span class="hidden md:inline">একাউন্ট</span>
                 </button>
                 <button onclick="window.toggleCartModal()" class="relative p-2 md:p-2.5 bg-indigo-50 text-indigo-600 rounded-full hover:bg-indigo-600 hover:text-white transition">
                     <i class="fa-solid fa-cart-shopping text-sm md:text-base"></i>
@@ -142,17 +129,14 @@
             </div>
         </div>
         
-        <div id="productGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
-        </div>
+        <div id="productGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6"></div>
     </main>
 
     <!-- Cart Modal -->
     <div id="cartModal" class="fixed inset-0 bg-black/60 z-50 hidden backdrop-blur-sm flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl w-full max-w-md p-6 max-h-[90vh] flex flex-col shadow-2xl">
             <div class="flex justify-between items-center border-b pb-3">
-                <h4 class="text-lg font-bold flex items-center gap-2">
-                    <i class="fa-solid fa-cart-shopping text-indigo-600"></i> আপনার কার্ট
-                </h4>
+                <h4 class="text-lg font-bold flex items-center gap-2"><i class="fa-solid fa-cart-shopping text-indigo-600"></i> আপনার কার্ট</h4>
                 <button onclick="window.toggleCartModal()" class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <div id="cartItems" class="flex-1 overflow-y-auto py-4 space-y-3"></div>
@@ -178,18 +162,15 @@
                 <h4 class="text-base md:text-lg font-bold text-gray-900">পেমেন্ট ও অর্ডার বিবরণ</h4>
                 <button onclick="window.toggleCheckoutModal()" class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
             </div>
-            
             <form id="orderForm" class="space-y-4">
                 <div><input type="text" id="custName" required placeholder="আপনার পূর্ণ নাম *" class="w-full border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-50"></div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                     <div><input type="email" id="custEmail" required placeholder="ইমেইল (ডেলিভারির জন্য) *" class="w-full border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-50"></div>
                     <div><input type="tel" id="custPhone" required placeholder="হোয়াটসঅ্যাপ নম্বর *" class="w-full border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-50"></div>
                 </div>
-
                 <div id="apiPaymentInfo" class="hidden bg-emerald-50 border border-emerald-200 p-4 rounded-xl text-emerald-800">
-                    <p class="text-xs md:text-sm font-bold"><i class="fa-solid fa-credit-card mr-2"></i>অটোমেটিক অনলাইন পেমেন্ট চালু আছে।</p>
+                    <p class="text-xs md:text-sm font-bold"><i class="fa-solid fa-credit-card mr-2"></i>অটোমেটিক অনলাইন পেমেন্ট চালু আছে। অর্ডার নিশ্চিত করলে পেমেন্ট পেজে নিয়ে যাওয়া হবে।</p>
                 </div>
-
                 <div id="manualPaymentSection">
                     <span class="block text-xs font-bold text-gray-700 uppercase mb-2">পেমেন্ট মেথড সিলেক্ট করুন *</span>
                     <div class="space-y-3">
@@ -197,10 +178,7 @@
                             <input type="radio" name="paymentMethod" id="payBkashRadio" value="bkash" class="payment-card-radio peer hidden" checked>
                             <label for="payBkashRadio" class="block p-3 md:p-4 rounded-2xl border-2 border-gray-200 bg-white cursor-pointer transition-all hover:border-pink-300">
                                 <div class="flex items-center justify-between mb-2">
-                                    <div class="flex items-center gap-2">
-                                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-pink-600 text-white flex items-center justify-center font-bold text-xs shadow-sm">bK</div>
-                                        <span class="font-bold text-gray-900 text-xs md:text-sm">bKash Personal</span>
-                                    </div>
+                                    <div class="flex items-center gap-2"><div class="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-pink-600 text-white flex items-center justify-center font-bold text-xs shadow-sm">bK</div><span class="font-bold text-gray-900 text-xs md:text-sm">bKash Personal</span></div>
                                     <span class="text-[10px] md:text-xs text-pink-600 font-semibold bg-pink-50 px-2 py-0.5 rounded-full">Send Money</span>
                                 </div>
                                 <div class="flex items-center justify-between bg-pink-50/60 p-2 md:p-2.5 rounded-xl border border-pink-100">
@@ -213,10 +191,7 @@
                             <input type="radio" name="paymentMethod" id="payNagadRadio" value="nagad" class="payment-card-radio peer hidden">
                             <label for="payNagadRadio" class="block p-3 md:p-4 rounded-2xl border-2 border-gray-200 bg-white cursor-pointer transition-all hover:border-orange-300">
                                 <div class="flex items-center justify-between mb-2">
-                                    <div class="flex items-center gap-2">
-                                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-orange-500 text-white flex items-center justify-center font-bold text-xs shadow-sm">NG</div>
-                                        <span class="font-bold text-gray-900 text-xs md:text-sm">Nagad Personal</span>
-                                    </div>
+                                    <div class="flex items-center gap-2"><div class="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-orange-500 text-white flex items-center justify-center font-bold text-xs shadow-sm">NG</div><span class="font-bold text-gray-900 text-xs md:text-sm">Nagad Personal</span></div>
                                     <span class="text-[10px] md:text-xs text-orange-600 font-semibold bg-orange-50 px-2 py-0.5 rounded-full">Send Money</span>
                                 </div>
                                 <div class="flex items-center justify-between bg-orange-50/60 p-2 md:p-2.5 rounded-xl border border-orange-100">
@@ -231,7 +206,6 @@
                         <input type="text" id="trxId" required placeholder="টাকা পাঠানোর পর প্রাপ্ত TrxID লিখুন" class="w-full border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none uppercase font-mono bg-gray-50">
                     </div>
                 </div>
-
                 <button type="submit" id="submitOrderBtn" class="w-full bg-emerald-600 text-white font-bold py-3 md:py-3.5 rounded-2xl shadow-lg hover:bg-emerald-700 transition mt-2">অর্ডার নিশ্চিত করুন</button>
             </form>
         </div>
@@ -284,13 +258,9 @@
         import { getFirestore, collection, onSnapshot, addDoc, doc, setDoc, getDoc, query, where, getDocs, updateDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
         const firebaseConfig = {
-            apiKey: "AIzaSyCUXPbQ0b8gRtnSx35H0kRRAYd6I3EYhBg",
-            authDomain: "digital-product-sell-emon.firebaseapp.com",
-            databaseURL: "https://digital-product-sell-emon-default-rtdb.asia-southeast1.firebasedatabase.app",
-            projectId: "digital-product-sell-emon",
-            storageBucket: "digital-product-sell-emon.firebasestorage.app",
-            messagingSenderId: "1047108915936",
-            appId: "1:1047108915936:web:19d2b916280c99c7ef7685"
+            apiKey: "AIzaSyCUXPbQ0b8gRtnSx35H0kRRAYd6I3EYhBg", authDomain: "digital-product-sell-emon.firebaseapp.com",
+            databaseURL: "https://digital-product-sell-emon-default-rtdb.asia-southeast1.firebasedatabase.app", projectId: "digital-product-sell-emon",
+            storageBucket: "digital-product-sell-emon.firebasestorage.app", messagingSenderId: "1047108915936", appId: "1:1047108915936:web:19d2b916280c99c7ef7685"
         };
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
@@ -304,14 +274,9 @@
         window.openCheckoutModal = () => { window.toggleCartModal(); window.toggleCheckoutModal(); };
         window.toggleTrackModal = () => { document.getElementById('trackModal').classList.toggle('hidden'); };
 
-        if(window.location.search.includes('payment=failed')) {
-            document.getElementById('paymentFailedModal').classList.remove('hidden');
-        }
+        if(window.location.search.includes('payment=failed')) document.getElementById('paymentFailedModal').classList.remove('hidden');
 
-        window.toggleAuthModal = () => {
-            document.getElementById('authModal').classList.toggle('hidden');
-            checkLoginState();
-        };
+        window.toggleAuthModal = () => { document.getElementById('authModal').classList.toggle('hidden'); checkLoginState(); };
 
         window.switchAuthView = (view) => {
             document.getElementById('loginView').classList.add('hidden');
@@ -332,9 +297,7 @@
                 document.getElementById('custEmail').value = localStorage.getItem('userEmail') || '';
                 document.getElementById('custPhone').value = userPhone;
                 loadUserOrders(userPhone, 'userOrdersList');
-            } else {
-                window.switchAuthView('login');
-            }
+            } else { window.switchAuthView('login'); }
         }
 
         window.handleRegister = async () => {
@@ -344,11 +307,8 @@
             if(!name || !phone) return window.showToast("নাম ও নম্বর বাধ্যতামূলক!", "error");
             try {
                 await setDoc(doc(db, "users", phone), { name, email, phone, createdAt: new Date().toISOString() });
-                localStorage.setItem('userPhone', phone);
-                localStorage.setItem('userName', name);
-                localStorage.setItem('userEmail', email);
-                window.showToast("রেজিস্ট্রেশন সফল!");
-                checkLoginState();
+                localStorage.setItem('userPhone', phone); localStorage.setItem('userName', name); localStorage.setItem('userEmail', email);
+                window.showToast("রেজিস্ট্রেশন সফল!"); checkLoginState();
             } catch(e) { window.showToast("ত্রুটি: "+e.message, "error"); }
         };
 
@@ -359,57 +319,45 @@
                 const docSnap = await getDoc(doc(db, "users", phone));
                 if (docSnap.exists()) {
                     const data = docSnap.data();
-                    localStorage.setItem('userPhone', data.phone);
-                    localStorage.setItem('userName', data.name);
-                    localStorage.setItem('userEmail', data.email || '');
-                    window.showToast("লগইন সফল!");
-                    checkLoginState();
+                    localStorage.setItem('userPhone', data.phone); localStorage.setItem('userName', data.name); localStorage.setItem('userEmail', data.email || '');
+                    window.showToast("লগইন সফল!"); checkLoginState();
                 } else {
-                    window.showToast("একাউন্ট নেই, রেজিস্ট্রেশন করুন।", "error");
-                    window.switchAuthView('register');
-                    document.getElementById('regPhone').value = phone;
+                    window.showToast("একাউন্ট নেই, রেজিস্ট্রেশন করুন।", "error"); window.switchAuthView('register'); document.getElementById('regPhone').value = phone;
                 }
             } catch(e) { window.showToast("ত্রুটি: "+e.message, "error"); }
         };
 
         window.handleLogout = () => {
-            localStorage.clear();
-            document.getElementById('custName').value = '';
-            document.getElementById('custEmail').value = '';
-            document.getElementById('custPhone').value = '';
-            window.showToast("লগআউট হয়েছে!");
-            window.switchAuthView('login');
+            localStorage.clear(); document.getElementById('custName').value = ''; document.getElementById('custEmail').value = ''; document.getElementById('custPhone').value = '';
+            window.showToast("লগআউট হয়েছে!"); window.switchAuthView('login');
         };
 
-        // Shared function for both Dashboard and Track Modal
+        // Custom function to load order history for Dashboard / Track order
         async function loadUserOrders(phone, containerId) {
             const container = document.getElementById(containerId);
             container.innerHTML = `<p class="text-center text-xs text-gray-500 my-4">লোড হচ্ছে...</p>`;
             try {
                 const q = query(collection(db, "orders"), where("customerPhone", "==", phone));
                 const snap = await getDocs(q);
-                if(snap.empty) { 
-                    container.innerHTML = `<p class="text-center text-xs text-red-500 font-bold my-4">কোনো অর্ডার পাওয়া যায়নি!</p>`; 
-                } else {
+                if(snap.empty) { container.innerHTML = `<p class="text-center text-xs text-red-500 font-bold my-4">কোনো অর্ডার পাওয়া যায়নি!</p>`; } 
+                else {
                     let userOrders = [];
                     snap.forEach(doc => userOrders.push({id: doc.id, ...doc.data()}));
-                    // Sort by newest first
                     userOrders.sort((a,b) => new Date(b.createdAt) - new Date(a.createdAt));
                     
                     let html = '';
                     userOrders.forEach((d, index) => {
-                        let statusColor = 'bg-amber-100 text-amber-700';
-                        let statusText = 'পেন্ডিং';
+                        let statusColor = 'bg-amber-100 text-amber-700'; let statusText = 'পেন্ডিং';
                         if(d.status === 'processing') { statusColor = 'bg-blue-100 text-blue-700'; statusText = 'প্রসেসিং'; }
                         else if(d.status === 'delivered') { statusColor = 'bg-emerald-100 text-emerald-700'; statusText = 'ডেলিভার্ড'; }
                         else if(d.status === 'cancelled') { statusColor = 'bg-red-100 text-red-700'; statusText = 'বাতিল'; }
 
                         html += `<div class="p-3 bg-gray-50 rounded-xl border border-gray-200 text-xs mb-3 shadow-sm">
-                                    <div class="flex justify-between items-center mb-1.5 border-b pb-1.5">
+                                    <div class="flex justify-between items-center mb-1.5 border-b border-gray-200 pb-1.5">
                                         <span class="font-black text-gray-800">অর্ডার নং- ${userOrders.length - index}</span>
                                         <span class="px-2 py-0.5 rounded font-bold ${statusColor}">${statusText}</span>
                                     </div>
-                                    <div class="text-gray-600 mb-2 font-medium">${d.items ? d.items.map(i=>`${i.name} (${i.selectedType || 'Standard'}) x ${i.qty || 1}`).join(', ') : ''}</div>
+                                    <div class="text-gray-600 mb-2 font-medium">${d.items ? d.items.map(i=>`${i.name} (${i.selectedType}, ${i.selectedValidity}) x${i.qty}`).join(', ') : ''}</div>
                                     <div class="flex justify-between items-center">
                                         <span class="font-mono text-[10px] text-gray-500"><i class="fa-regular fa-calendar mr-1"></i>${new Date(d.createdAt).toLocaleDateString()}</span>
                                         <span class="font-black text-indigo-600">৳${d.totalAmount}</span>
@@ -469,17 +417,9 @@
             try {
                 const apiSnap = await getDoc(doc(db, "settings", "apiPayment"));
                 if(apiSnap.exists()) apiSettings = apiSnap.data();
-                
                 const numSnap = await getDoc(doc(db, "settings", "payments"));
-                if(numSnap.exists()) {
-                    document.getElementById('bkashNumText').innerText = numSnap.data().bkash || 'নম্বর নেই';
-                    document.getElementById('nagadNumText').innerText = numSnap.data().nagad || 'নম্বর নেই';
-                }
-                if(apiSettings?.isActive) {
-                    document.getElementById('manualPaymentSection').classList.add('hidden');
-                    document.getElementById('apiPaymentInfo').classList.remove('hidden');
-                    document.getElementById('trxId').removeAttribute('required');
-                }
+                if(numSnap.exists()) { document.getElementById('bkashNumText').innerText = numSnap.data().bkash || 'নম্বর নেই'; document.getElementById('nagadNumText').innerText = numSnap.data().nagad || 'নম্বর নেই'; }
+                if(apiSettings?.isActive) { document.getElementById('manualPaymentSection').classList.add('hidden'); document.getElementById('apiPaymentInfo').classList.remove('hidden'); document.getElementById('trxId').removeAttribute('required'); }
             } catch(e) {}
         }
         loadPaymentConfig();
@@ -495,20 +435,25 @@
 
         window.copyNumber = (elementId) => {
             const num = document.getElementById(elementId).innerText;
-            if(num && num !== 'নম্বর নেই' && num !== 'লোড হচ্ছে...') {
-                navigator.clipboard.writeText(num);
-                window.showToast(`নম্বরটি কপি করা হয়েছে`);
-            }
+            if(num && num !== 'নম্বর নেই' && num !== 'লোড হচ্ছে...') { navigator.clipboard.writeText(num); window.showToast(`নম্বরটি কপি করা হয়েছে`); }
         };
 
+        // Product Variant Rendering & Calculations
         function renderProducts(items) {
             const grid = document.getElementById('productGrid');
             if(items.length === 0) { grid.innerHTML = `<p class="col-span-full text-center py-10 text-gray-400 text-sm">প্রোডাক্ট এভেইলএবল নেই</p>`; return; }
             
             grid.innerHTML = items.map(p => {
-                const types = p.type ? p.type.split(',') : ['Standard'];
-                const typeOptions = types.map(t => `<option value="${t.trim()}">${t.trim()}</option>`).join('');
+                // Ensure variants exist for backwards compatibility
+                const variants = p.variants && p.variants.length > 0 ? p.variants : [{ type: p.type || 'Standard', validity: p.validity || 'LifeTime', price: Number(p.price) || 0 }];
                 
+                const uniqueTypes = [...new Set(variants.map(v => v.type))];
+                const uniqueValidities = [...new Set(variants.map(v => v.validity))];
+                
+                const typeOptions = uniqueTypes.map(t => `<option value="${t}">${t}</option>`).join('');
+                const validityOptions = uniqueValidities.map(v => `<option value="${v}">${v}</option>`).join('');
+                const defaultPrice = variants[0].price;
+
                 return `
                 <div class="bg-white rounded-[1.2rem] md:rounded-3xl border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all duration-300">
                     <div>
@@ -520,18 +465,26 @@
                         </div>
                         <div class="p-3 md:p-4">
                             <h4 class="font-bold text-gray-900 text-sm md:text-base mb-2 truncate">${p.name}</h4>
-                            <div class="flex gap-1.5 mb-2">
-                                <select id="type-${p.id}" class="flex-1 border border-gray-200 rounded px-1.5 py-1 text-[10px] md:text-xs outline-none bg-gray-50 font-medium text-gray-700">
-                                    ${typeOptions}
-                                </select>
-                                <input type="number" id="qty-${p.id}" value="1" min="1" max="${p.quantity || 100}" class="w-12 md:w-16 border border-gray-200 rounded px-1 py-1 text-center text-[10px] md:text-xs outline-none bg-gray-50 font-bold">
+                            <div class="flex flex-col gap-1.5 mb-2">
+                                <div class="flex gap-1.5">
+                                    <select id="type-${p.id}" onchange="window.updatePrice('${p.id}')" class="w-1/2 border border-indigo-100 bg-indigo-50 text-indigo-700 rounded px-1 py-1 text-[9px] md:text-[10px] font-bold outline-none">
+                                        ${typeOptions}
+                                    </select>
+                                    <select id="validity-${p.id}" onchange="window.updatePrice('${p.id}')" class="w-1/2 border border-emerald-100 bg-emerald-50 text-emerald-700 rounded px-1 py-1 text-[9px] md:text-[10px] font-bold outline-none">
+                                        ${validityOptions}
+                                    </select>
+                                </div>
+                                <div class="flex items-center justify-between border border-gray-200 rounded bg-gray-50 h-7">
+                                    <button onclick="window.changeQty('${p.id}', -1)" class="w-8 h-full text-gray-500 font-bold hover:bg-gray-200 transition">-</button>
+                                    <input type="text" id="qty-${p.id}" value="1" readonly class="flex-1 w-full h-full text-center text-[10px] md:text-xs font-bold bg-transparent outline-none pointer-events-none">
+                                    <button onclick="window.changeQty('${p.id}', 1)" class="w-8 h-full text-gray-500 font-bold hover:bg-gray-200 transition">+</button>
+                                </div>
                             </div>
-                            <p class="text-[10px] md:text-xs text-gray-500 line-clamp-1 mb-2 font-medium"><i class="fa-regular fa-clock mr-1 text-emerald-500"></i>${p.validity || 'LifeTime'}</p>
                         </div>
                     </div>
                     <div class="px-3 md:px-4 pb-3 md:pb-4 pt-0">
                         <div class="flex items-center justify-between mb-3">
-                            <span class="text-sm md:text-lg font-black text-indigo-600">৳${p.price}</span>
+                            <span id="price-display-${p.id}" class="text-sm md:text-lg font-black text-indigo-600">৳${defaultPrice}</span>
                         </div>
                         <div class="flex gap-2">
                             <button onclick="window.buyNow('${p.id}')" ${!p.inStock ? 'disabled' : ''} class="flex-1 bg-emerald-600 text-white hover:bg-emerald-700 py-1.5 md:py-2 rounded-lg text-[10px] md:text-xs font-bold transition disabled:opacity-40">কিনুন</button>
@@ -542,6 +495,28 @@
             }).join('');
         }
 
+        window.changeQty = (id, change) => {
+            const input = document.getElementById(`qty-${id}`);
+            let val = parseInt(input.value) + change;
+            if(val < 1) val = 1;
+            input.value = val;
+            window.updatePrice(id);
+        };
+
+        window.updatePrice = (id) => {
+            const item = products.find(p => p.id === id);
+            if(!item) return;
+            const variants = item.variants && item.variants.length > 0 ? item.variants : [{ type: item.type || 'Standard', validity: item.validity || 'LifeTime', price: Number(item.price) || 0 }];
+            const selectedType = document.getElementById(`type-${id}`).value;
+            const selectedValidity = document.getElementById(`validity-${id}`).value;
+            const qty = parseInt(document.getElementById(`qty-${id}`).value) || 1;
+            
+            let variant = variants.find(v => v.type === selectedType && v.validity === selectedValidity);
+            if(!variant) variant = variants[0]; // fallback
+            
+            document.getElementById(`price-display-${id}`).innerText = `৳${variant.price * qty}`;
+        };
+
         window.filterCategory = (cat) => {
             document.querySelectorAll('.cat-btn').forEach(b => { b.classList.remove('bg-indigo-600', 'text-white'); b.classList.add('bg-gray-200', 'text-gray-700'); });
             event.target.classList.remove('bg-gray-200', 'text-gray-700'); event.target.classList.add('bg-indigo-600', 'text-white');
@@ -551,22 +526,31 @@
         window.addToCart = (id) => { 
             const item = products.find(p => p.id === id); 
             if(item) { 
-                const qty = parseInt(document.getElementById(`qty-${id}`).value) || 1;
+                const variants = item.variants && item.variants.length > 0 ? item.variants : [{ type: item.type || 'Standard', validity: item.validity || 'LifeTime', price: Number(item.price) || 0 }];
                 const type = document.getElementById(`type-${id}`).value;
-                cart.push({...item, qty, selectedType: type}); 
-                updateCartUI(); 
-                window.showToast(`কার্টে যোগ করা হয়েছে`); 
+                const validity = document.getElementById(`validity-${id}`).value;
+                const qty = parseInt(document.getElementById(`qty-${id}`).value) || 1;
+                let variant = variants.find(v => v.type === type && v.validity === validity) || variants[0];
+
+                const existingIdx = cart.findIndex(c => c.id === id && c.selectedType === type && c.selectedValidity === validity);
+                if(existingIdx > -1) { cart[existingIdx].qty += qty; } 
+                else { cart.push({...item, qty, selectedType: type, selectedValidity: validity, cartPrice: variant.price}); }
+                
+                updateCartUI(); window.showToast(`কার্টে যোগ করা হয়েছে`); 
             } 
         };
 
         window.buyNow = (id) => {
             const item = products.find(p => p.id === id); 
             if(item) { 
-                const qty = parseInt(document.getElementById(`qty-${id}`).value) || 1;
+                const variants = item.variants && item.variants.length > 0 ? item.variants : [{ type: item.type || 'Standard', validity: item.validity || 'LifeTime', price: Number(item.price) || 0 }];
                 const type = document.getElementById(`type-${id}`).value;
-                cart = [{...item, qty, selectedType: type}]; 
-                updateCartUI(); 
-                window.openCheckoutModal();
+                const validity = document.getElementById(`validity-${id}`).value;
+                const qty = parseInt(document.getElementById(`qty-${id}`).value) || 1;
+                let variant = variants.find(v => v.type === type && v.validity === validity) || variants[0];
+                
+                cart = [{...item, qty, selectedType: type, selectedValidity: validity, cartPrice: variant.price}]; 
+                updateCartUI(); window.openCheckoutModal();
             } 
         };
 
@@ -574,20 +558,19 @@
 
         function updateCartUI() {
             document.getElementById('cartCount').innerText = cart.length;
-            const subtotal = cart.reduce((sum, item) => sum + (Number(item.price) * item.qty), 0);
+            const subtotal = cart.reduce((sum, item) => sum + (Number(item.cartPrice) * item.qty), 0);
             const total = Math.max(0, subtotal - discount);
             document.getElementById('cartSubtotal').innerText = `৳${subtotal}`;
             document.getElementById('cartDiscount').innerText = `- ৳${discount}`;
             document.getElementById('cartTotal').innerText = `৳${total}`;
             document.getElementById('checkoutBtn').disabled = cart.length === 0;
-            
             const container = document.getElementById('cartItems');
             if (cart.length === 0) { container.innerHTML = `<p class="text-center text-xs text-gray-400 py-6">কার্ট খালি</p>`; return; }
             container.innerHTML = cart.map((p, idx) => `
                 <div class="flex items-center justify-between border-b border-gray-100 pb-2">
                     <div>
-                        <p class="font-bold text-xs text-gray-800">${p.name} <span class="font-normal text-[10px] text-gray-500">(${p.selectedType}) x${p.qty}</span></p>
-                        <span class="text-xs font-black text-indigo-600">৳${p.price * p.qty}</span>
+                        <p class="font-bold text-xs text-gray-800">${p.name} <span class="font-normal text-[10px] text-gray-500">(${p.selectedType}, ${p.selectedValidity}) x${p.qty}</span></p>
+                        <span class="text-xs font-black text-indigo-600">৳${p.cartPrice * p.qty}</span>
                     </div>
                     <button onclick="window.removeFromCart(${idx})" class="text-red-400 hover:text-red-600 text-xs p-1"><i class="fa-solid fa-trash"></i></button>
                 </div>`).join('');
@@ -609,7 +592,7 @@
             const btn = document.getElementById('submitOrderBtn');
             btn.innerText = "প্রসেসিং হচ্ছে..."; btn.disabled = true;
 
-            const subtotal = cart.reduce((sum, item) => sum + (Number(item.price) * item.qty), 0);
+            const subtotal = cart.reduce((sum, item) => sum + (Number(item.cartPrice) * item.qty), 0);
             const total = Math.max(0, subtotal - discount);
             const method = apiSettings?.isActive ? 'Online API' : (document.querySelector('input[name="paymentMethod"]:checked')?.value || 'Manual');
 
@@ -623,17 +606,15 @@
             };
 
             try {
-                // Auto register if missing
                 if(!localStorage.getItem('userPhone')) {
                     await setDoc(doc(db, "users", order.customerPhone), { name: order.customerName, email: order.customerEmail, phone: order.customerPhone, createdAt: new Date().toISOString() }, {merge: true});
                     localStorage.setItem('userPhone', order.customerPhone);
                     localStorage.setItem('userName', order.customerName);
                 }
 
-                // Place Order
                 const docRef = await addDoc(collection(db, "orders"), order);
                 
-                // Deduct Stock
+                // Deduct Main Stock Qty
                 cart.forEach(async (item) => {
                     if(item.id) {
                         try {
